@@ -19,6 +19,7 @@ main {
 	align-items: center;
 	justify-content: center;
 	background-color: cadetblue;
+	padding: 1rem;
 }
 
 form {
@@ -29,10 +30,12 @@ form {
 	background-color: rgba(0, 0, 0, 0.388);
 	padding: 2rem;
 	border-radius: 1rem;
+	box-shadow: 0 0 3rem .25rem rgba(0, 0, 0, 0.299);
 
 	h1 {
 		color: white;
 		align-self: center;
+		text-align: center;
 	}
 	.input-group {
 		display: flex;
@@ -43,8 +46,13 @@ form {
 		border-radius: 2rem;
 		color: cadetblue;
 		font-weight: 900;
+		transition: .15s ease-in;
 		&:hover {
 			cursor: pointer;
+		}
+		&:focus {
+			outline: none;
+			transform: scale(.98);
 		}
 	}
 	input[type='text'],
@@ -74,8 +82,14 @@ form {
 	span {
 		align-self: center;
 		color: white;
+		text-align: center;
 		a {
 			color: cadetblue;
+			&:focus,
+			&:hover {
+				outline: none;
+				opacity: .5;
+			}
 		}
 	}
 }

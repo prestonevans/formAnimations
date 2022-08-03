@@ -19,6 +19,7 @@ main {
   align-items: center;
   justify-content: center;
   background-color: cadetblue;
+  padding: 1rem;
 }
 
 form {
@@ -29,10 +30,12 @@ form {
   background-color: rgba(0, 0, 0, 0.388);
   padding: 2rem;
   border-radius: 1rem;
+  box-shadow: 0 0 3rem 0.25rem rgba(0, 0, 0, 0.299);
 }
 form h1 {
   color: white;
   align-self: center;
+  text-align: center;
 }
 form .input-group {
   display: flex;
@@ -43,9 +46,14 @@ form button {
   border-radius: 2rem;
   color: cadetblue;
   font-weight: 900;
+  transition: 0.15s ease-in;
 }
 form button:hover {
   cursor: pointer;
+}
+form button:focus {
+  outline: none;
+  transform: scale(0.98);
 }
 form input[type=text],
 form input[type=password] {
@@ -74,9 +82,14 @@ form input:focus + label {
 form span {
   align-self: center;
   color: white;
+  text-align: center;
 }
 form span a {
   color: cadetblue;
+}
+form span a:focus, form span a:hover {
+  outline: none;
+  opacity: 0.5;
 }
 
 .transform {
